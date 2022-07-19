@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOMENTUM</title>
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/clock.js" defer></script>
+  <script src="./js/login.js" defer></script>
+  <script src="./js/todo.js" defer></script>
+  <script src="./js/bg.js" defer></script>
+  <script src="./js/wrapTxt.js" defer></script>
+</head>
+<body>
+  <div class="loading">
+    Loading...
+  </div>
+  <div id="wrap">
+    <div class="txt">
+      It's only available on the web.
+    </div>
+    <div class="wrapBg"></div>
+    <div class="container">
+      <div class="top">
+        <div class="toDay"></div> <!-- 날짜 -->
+        <div class="clock"></div> <!-- 시간 -->
+      </div>
+      <div class="contents">
+        <div class="login-box"> <!-- 로그인 폼 -->
+          <h2>
+            <p class="active"></p>
+            <p></p>
+          </h2>
+          <form class="login-form">
+            <input type="text" placeholder="What's You'r Name?" required>
+            <button>Login</button>
+          </form>
+        </div>
+        <div class="hidden todo-box"> <!-- 로그인 시 활성화(list) -->
+          <div class="info-box">
+            <div class="user"> <!-- 로그인 시 활성화 -->
+              <p></p>
+              <button class="re-set">LogOut</button>
+            </div>
+            <div class="form-box">
+              <form class="todo-form"> <!-- 오늘 할일 form -->
+                <input type="text" class="todo" required placeholder="오늘 할 일">
+              </form>
+            </div>
+            <button class="all-clear">All Clear</button><!-- 통합 삭제 -->
+          </div>
+          <div class="today-box list-wrap">
+            <div class="today-tit list-tit">
+              해야할 일
+            <button class="today-clear item-clear ti-trash" title="Clear"></button><!-- 오늘 할 일 삭제 -->
+            </div>
+            <div class="today-todo">
+              <ul>
+              </ul>
+            </div>
+          </div>
+          <div class="work-done-wrap list-wrap">
+            <div class="work-done-tit list-tit">
+              완료한 일
+              <button class="work-done-clear item-clear ti-trash" title="Clear"></button><!-- 내일 할 일 삭제 -->
+            </div>
+            <div class="work-done-box">
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
