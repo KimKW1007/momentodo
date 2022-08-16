@@ -21,7 +21,7 @@ const wrapBg = document.querySelector('.wrapBg');
 let randomImgs = imgs[Math.floor(Math.random()*imgs.length)];
 
 wrapBg.style.background = `url(./img/${randomImgs}) no-repeat center center`
-wrapBg.style.backgroundSize= `cover`;
+wrapBg.style.backgroundSize= `100% 130%`;
 
 const loading = document.querySelector('.loading');
 const loadingFn = () =>{
