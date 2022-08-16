@@ -1,11 +1,6 @@
 //todayTodo,tomorrowTodo,todayUl,tomorrowUl
 // 위 변수들은 login.js 에 있음!! 주의
 
-/* 
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        할일 체크하면 한일로 넘기셈
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-*/
 
 const todoForm = todoBox.querySelector('.todo-form');
 const todoInput = todoForm.querySelector('.todo');
@@ -46,7 +41,7 @@ const removeItem = (li) => {
   li.remove();
 };
 
-// 오늘 리스트 함수 submit과 연결됨
+// todo 리스트 함수 submit과 연결됨
 const addTodoList = (todo) => {
   const li = document.createElement('li');
   li.id = todo.id;
@@ -84,7 +79,7 @@ const addTodoList = (todo) => {
   todayUl.appendChild(li);
 };
 
-// 내일 리스트 함수 submit과 연결됨
+// WorkDone 리스트 함수
 const addWorkdoneList = (todo) => {
   const li = document.createElement('li');
   li.id = todo.id;  
@@ -124,7 +119,7 @@ const addWorkdoneList = (todo) => {
   wdUl.appendChild(li);
 };
 
-// 오늘 submit 함수
+// submit 함수
 const listFormHandler = (e) => {
   e.preventDefault();
   const todo = todoInput.value;
@@ -140,10 +135,10 @@ const listFormHandler = (e) => {
 };
 
 
-// 오늘 내일 할일 각자 submit
+// submit
 todoForm.addEventListener('submit', listFormHandler);
 
-// 만약 localStorage 값이 잇다면 그걸 쓰고 없다면 초기상태
+// 만약 localStorage 값이 있다면 그걸 쓰고 없다면 초기상태
 const savedParse = localStorage.getItem(TODO_KEY);
 const savedParse2 = localStorage.getItem(WD_KEY);
 
@@ -161,7 +156,7 @@ if (savedParse2 !== null) {
 // 통합 전체 삭제
 const allClear = (e) => {
   e.preventDefault();
-  if (confirm('오늘과 내일의 할 일을 모두 삭제합니다.')) {
+  if (confirm('리스트를 모두 삭제합니다.')) {
     todos = [];
     todayUl.innerHTML = '';
     localStorage.removeItem(TODO_KEY);
@@ -174,7 +169,7 @@ const allClear = (e) => {
 // 오늘 전체 삭제
 const toDayClear = (e) => {
   e.preventDefault();
-  if (confirm('오늘 할 일을 전체 삭제합니다.')) {
+  if (confirm('해야할 일을 전체 삭제합니다.')) {
     todos = [];
     todayUl.innerHTML = '';
     localStorage.removeItem(TODO_KEY);
