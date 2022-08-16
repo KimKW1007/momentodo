@@ -1,3 +1,4 @@
+/* common */
 .line {
   text-decoration: line-through;
 }
@@ -15,6 +16,7 @@ input::placeholder {
   color: #fff;
 }
 
+/* Loading */
 .loading {
   position: absolute;
   z-index: 2;
@@ -36,6 +38,7 @@ input::placeholder {
   opacity: 0;
 }
 
+/* Wrap */
 #wrap {
   position: relative;
   z-index: 1;
@@ -49,6 +52,10 @@ input::placeholder {
   right: 30px;
   bottom: 20px;
   font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #wrap .wrapBg {
   position: absolute;
@@ -100,7 +107,7 @@ input::placeholder {
   border: 1px solid #448aff;
   padding: 10px 15px;
   border-radius: 10px;
-  background: #E5F0FF;
+  background: #e5f0ff;
   color: #232323;
 }
 #wrap .container .top .toDay .year {
@@ -138,6 +145,8 @@ input::placeholder {
   height: 100%;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
+  /* Login */
+  /* List */
 }
 #wrap .container .contents .login-box {
   position: absolute;
@@ -243,11 +252,13 @@ input::placeholder {
   opacity: 0;
   overflow: hidden;
   transition: opacity 0.3s;
+  /* item clear btn */
+  /* lists */
 }
 #wrap .container .contents .todo-box > div {
   margin: 0 15px;
 }
-#wrap .container .contents .todo-box.opa {
+#wrap .container .contents .todo-box.opacity {
   opacity: 1;
   transition: opacity 0.5s;
 }
@@ -350,11 +361,25 @@ input::placeholder {
   font-size: 30px;
   line-height: 48px;
 }
+#wrap .container .contents .todo-box .today-box {
+  height: 100%;
+}
+#wrap .container .contents .todo-box .today-box .today-todo {
+  height: 100%;
+  background: rgba(201, 207, 212, 0.2549019608);
+}
 #wrap .container .contents .todo-box .today-box .today-tit {
   background: linear-gradient(#4e352c, #8d6e63);
 }
+#wrap .container .contents .todo-box .work-done-wrap {
+  height: 100%;
+}
 #wrap .container .contents .todo-box .work-done-wrap .work-done-tit {
   background: linear-gradient(#373737, #616161);
+}
+#wrap .container .contents .todo-box .work-done-wrap .work-done-box {
+  height: 100%;
+  background: rgba(201, 207, 212, 0.2549019608);
 }
 #wrap .container .contents .todo-box .work-done-wrap .work-done-box ul li div label {
   background: url(../img/checkbox-icons.png) no-repeat 100% 0;
@@ -363,8 +388,7 @@ input::placeholder {
 #wrap .container .contents .todo-box ul {
   padding: 20px 10px;
   overflow-y: scroll;
-  height: 587px;
-  background: rgba(201, 207, 212, 0.2549019608);
+  height: 85%;
 }
 #wrap .container .contents .todo-box ul::-webkit-scrollbar {
   width: 5px;
