@@ -22,7 +22,7 @@ const setUserName = (userID)=>{
   loginBox.classList.add("out")
   todoBox.classList.remove("hidden");
   setTimeout(() => {
-    todoBox.classList.add("opa")
+    todoBox.classList.add("opacity")
     loginBox.classList.add("hidden")
   }, 800);
 }
@@ -64,7 +64,7 @@ const logoutFn = (e)=>{
   if(confirm("이름을 바꿈과 동시에 리스트가 초기화 됩니다.\n로그아웃 하시겠습니까?")){
     loginInput.value = '';
     localStorage.removeItem(USER_ID);
-    todoBox.classList.remove("opa");
+    todoBox.classList.remove("opacity");
     setTimeout(() => {
       todoBox.classList.add("hidden")
       loginBox.classList.remove("out")
